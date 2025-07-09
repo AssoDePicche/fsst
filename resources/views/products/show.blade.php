@@ -22,7 +22,30 @@
     @if($product->transactions()->count() == 0)
         <p>Não há nenhuma transação associada a este produto, mas não se preocupe, <a class="fw-bold" href="{{ route('transactions.index') }}">associe uma transação agora mesmo</a>.</p>
     @else
-        @foreach($product->transactions()->get() as $transaction)
-        @endforeach
+        <table class="table">
+            <thead>
+                <th>Tipo</th>
+                <th>Quantidade</th>
+                <th>Observações</th>
+            </thead>
+            <tbody>
+                @foreach($product->transactions()->get() as $transaction)
+                    <tr>
+                        <td>
+                            <span class="badge badge-pill badge-{{
+                                $transaction->type === 'entry' ? 'success' : 'danger'}}">
+                                {{ $transaction->type === 'entry' ? 'Entrada' : 'Saída' }}
+                            </span>
+                        </td>
+                        <td>
+                            {{ $transaction->quantity }}
+                        </td>
+                        <td>
+                            {{ $transaction->notes ?? 'Nenhuma observação' }}
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
     @endif
 @endsection

@@ -45,6 +45,6 @@ class User extends Authenticatable
         return Transaction::whereIn(
             'product_id',
             $this->products()->pluck('id')
-        )->get();
+        );
     }
 }
