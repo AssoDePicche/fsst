@@ -21,6 +21,7 @@
         <p>Não há nenhum produto cadastrado nesta categoria, mas não se preocupe, <a class="fw-bold" href="{{ route('products.index') }}">associe um produto agora mesmo</a>.</p>
     @else
         @foreach($category->products()->get() as $product)
+            <x-product-card :product="$product" />
         @endforeach
     @endif
 @endsection
