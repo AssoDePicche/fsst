@@ -121,6 +121,6 @@ class UserController extends Controller
 
         $message = 'Perfil excluído';
 
-        return redirect()->route('users.create')->with('success', $message)
+        return redirect()->route('users.create')->with('success', $message);
     }
 }
