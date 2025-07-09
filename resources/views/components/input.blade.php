@@ -5,7 +5,7 @@
         type="{{ $type }}"
         name="{{ $name }}"
         id="{{ $name }}"
-        value="{{ old($name) }}"
+        value="{{ $value ?? old($name) }}"
         class="form-control"
         {{ $required ? 'required' : '' }}
     />

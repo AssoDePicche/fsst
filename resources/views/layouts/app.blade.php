@@ -6,6 +6,7 @@
         <meta name="_token" content="{{ csrf_token() }}">
         <title>{{ config('app.name') }}</title>
         <link rel="shortcut icon" href="{{asset('img/favicon.png')}}" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
         <link rel="stylesheet" href="{{ asset('adminlte/plugins/fontawesome-free/css/all.min.css') }}">
@@ -33,6 +34,7 @@
         <script src="{{ asset('adminlte/plugins/moment/moment.min.js') }}"></script>
         <script src="{{ asset('adminlte/dist/js/adminlte.js') }}"></script>
         <script src="{{ asset('js/app.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
         @stack('scripts')
     </body>
 </html>

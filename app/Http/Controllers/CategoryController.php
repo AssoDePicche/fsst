@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
@@ -30,7 +31,7 @@ class CategoryController extends Controller
             'name' => $validated['name'],
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Nova categoria adicionada');
+        return redirect()->route('categories.index')->with('success', 'Nova categoria adicionada');
     }
 
     public function show(string $id)
@@ -64,7 +65,7 @@ class CategoryController extends Controller
             'name' => $validated['name'],
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Alterações realizadas');
+        return redirect()->route('categories.index')->with('success', 'Alterações realizadas');
     }
 
     public function destroy(string $id)
@@ -73,6 +74,6 @@ class CategoryController extends Controller
 
         $resultSet->delete();
 
-        return redirect()->route('dashboard')->with('success', 'Categoria excluída');
+        return redirect()->route('categories.index')->with('success', 'Categoria excluída');
     }
 }
