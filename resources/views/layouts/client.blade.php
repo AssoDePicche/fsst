@@ -11,8 +11,9 @@
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/dashboard">Dashboard</a>
         <a class="nav-link" href="/categories">Categorias</a>
-        <a class="nav-link" href="/products">Productos</a>
+        <a class="nav-link" href="/products">Produtos</a>
         <a class="nav-link" href="/transactions">Transações</a>
+        <a class="nav-link" href="/logout">Sair</a>
       </div>
     </div>
   </div>
