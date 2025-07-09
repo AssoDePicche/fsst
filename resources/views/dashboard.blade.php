@@ -9,7 +9,7 @@
                 text="Categorias"
                 count="{{ auth()->user()->categories()->count() }}"
                 icon="fa-list"
-                link=""
+                link="/categories"
                 footerText="Veja, crie e edite categorias"
             />
         </div>
