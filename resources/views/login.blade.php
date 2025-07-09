@@ -1,7 +1,7 @@
 @extends('layouts.guest')
 
 @section('content')
-    <form action="/register" method="POST">
+    <form action="/login" method="POST">
         @csrf
 
         <h1>Entrar</h1>
